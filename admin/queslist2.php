@@ -7,13 +7,10 @@
 <?php
   if (isset($_GET['delque'])) {
       $delNo = (int)$_GET['delque'];
-      $delQue = $exm->deleteQuestion($delNo);
+      $delQue = $exm->deleteQuestion($quesNo);
     }
  ?>
 <div class="main">
-  <?php if (isset($delQue)) {
-    echo $delQue;
-  } ?>
   <h1>List Pertanyaan</h1>
       <div class="quelist">
           <table class="tblone">

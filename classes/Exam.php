@@ -10,11 +10,26 @@ class Exam{
       $this->db = new Database();
       $this->fm = new Format();
   }
-  public function getQues(){
-    $query = "SELECT * FROM tbl_ques ORDER BY quesNo ASC";
+  public function getQuesMath(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel = '3'ORDER BY quesNo ASC";
     $result = $this->db->select($query);
     return $result;
   }
 
+  public function deleteQuestion($quesNo){
+    $tables = array("tbl_ques","tbl_ans");
+    foreach ($tables as $table) {
+      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo'";
+      $deldata = $this->db->delete($delquery);
+    }
+    if ($deldata) {
+      $msg = "<span class = 'success'>Soal berhasil dihapus</span>";
+      return $msg;
+    }
+    else {
+      $msg = "<span class = 'success'>Terjadi Kesalahan</span>";
+      return $msg;
+    }
+  }
   }
  ?>
