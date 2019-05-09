@@ -1,19 +1,19 @@
 <?php
-		$filepath = realpath(dirname(__FILE__));
-		include_once ($filepath.'/../lib/Session.php');
-		Session::init();
-		include_once ($filepath.'/../lib/Database.php');
-		include_once ($filepath.'/../helpers/Format.php');
+$filepath = realpath(dirname(__FILE__));
+include_once ($filepath.'/../lib/Session.php');
+Session::init();
+include_once ($filepath.'/../lib/Database.php');
+include_once ($filepath.'/../helpers/Format.php');
 
-		spl_autoload_register(function($class){
-			include_once “classes/“.$class.”.php”;
-		});
+spl_autoload_register(function($class){
+	include_once “classes/“.$class.”.php”;
+});
 
-		$db = new Database();
-		$fm = new Format();
-		$usr = new User();
-		$exm = new Exam();
-		$pro= new Process();
+$db = new Database();
+$fm = new Format();
+$usr = new User();
+$exm = new Exam();
+$pro= new Process();
 
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: pre-check=0, post-check=0, max-age=0");
