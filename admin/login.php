@@ -3,6 +3,8 @@
 	include_once ($filepath.'/inc/loginheader.php');
   include_once ($filepath.'/../classes/Admin.php');
   $ad = new Admin();
+?>
+<?php
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $adminData = $ad->getAdminData($_POST);
   }
