@@ -20,6 +20,11 @@ $next = $total+1;
 ?>
 <div class="main">
 <h1>Tambahkan Pertanyaan</h1>
+<?php
+  if (isset($addQue)) {
+    echo $addQue;
+  }
+ ?>
     <div class="adminpanel">
       <form action="" method="post">
         <table>
