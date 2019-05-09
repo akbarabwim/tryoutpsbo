@@ -1,3 +1,11 @@
-# tryoutpsbo
-Projek PSBO 18 19
- Link to learn: http://www.trainingwithliveproject.com/2016/08/php-ajax-jquery-online-quiz-system-bangla-tutorial.html
+# Aplikasi Latihan Soal Try Out
+
+## Oleh
+1. Nabila Ramadhani
+2. Firman Akbar
+3. Sulaiman
+
+## Framework Yang Digunakan
+1. PHP OOP
+2. AJAX
+3. JQuery
