@@ -16,6 +16,17 @@ class Exam{
     return $result;
   }
 
+  public function addQuestions($data){
+    $quesNo = mysqli_real_escape_string($this->db->link, $data['quesNo']);
+    $ques = mysqli_real_escape_string($this->db->link, $data['ques']);
+    $ans = array();
+    $ans[1] = $data['ans1'];
+    $ans[2] = $data['ans2'];
+    $ans[3] = $data['ans3'];
+    $ans[4] = $data['ans4'];
+    $rightAns = $data['rightAns'];
+  }
+
   public function deleteQuestion($quesNo){
     $tables = array("tbl_ques","tbl_ans");
     foreach ($tables as $table) {
@@ -30,6 +41,13 @@ class Exam{
       $msg = "<span class = 'success'>Terjadi Kesalahan</span>";
       return $msg;
     }
+  }
+
+  public function getTotalRows(){
+    $query = "SELECT * FROM tbl_ques";
+    $getResult = $this->db->select($query);
+    $total = $getResult->num_rows;
+    return $total;
   }
   }
  ?>

@@ -1,6 +1,8 @@
 <?php
     $filepath = realpath(dirname(__FILE__));
 	include_once ($filepath.'/inc/header.php');
+  include_once ($filepath.'/../classes/Exam.php');
+  $exm = new Exam();
 ?>
 <?php
   // Session::checkLogin();
@@ -9,6 +11,13 @@
 .adminpanel{width: 500px;color: #999;margin: 30px auto 0; padding: 50px;border-radius: :1px solid
 #ddd;}
 </style>
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+  $addQue = $exm->addQuestions($_POST);
+}
+$total = $exm->getTotalRows();
+$next = $total+1;
+?>
 <div class="main">
 <h1>Tambahkan Pertanyaan</h1>
     <div class="adminpanel">
@@ -17,7 +26,11 @@
           <tr>
             <td>No. Pertanyaan</td>
             <td>:</td>
-            <td><input type="number" value="" name="quesNo"/></td>
+            <td><input type="number" value="<?php
+              if (isset($next)){
+                echo $next;
+              }
+            ?>" name="quesNo"/></td>
           </tr>
           <tr>
             <td>Pertanyaan</td>
