@@ -6,7 +6,7 @@ include_once ($filepath.'/../lib/Database.php');
 include_once ($filepath.'/../helpers/Format.php');
 
 spl_autoload_register(function($class){
-	include_once “classes/“.$class.”.php”;
+	include_once "classes/".$class.".php";
 });
 
 $db = new Database();

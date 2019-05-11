@@ -5,6 +5,11 @@
   border-bottom: 2px solid #444444;
   height: 100px;
 }
+.success{
+  color:green;}
+.error {
+  color: red;
+}
 .footeroption{background:#444;color:#fff;text-align:center;padding:20px;}
  .headeroption h2, .footeroption h2{margin:0;font-size:24px}
 .maincontent {

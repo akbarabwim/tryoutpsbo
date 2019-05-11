@@ -1,6 +1,6 @@
-$(function()}{
+$(function(){
   //untuk registrasi peserta
-  $("#regsubmit").click(function()}{
+  $("#regsubmit").click(function(){
     var name        = $("#name").val();
     var username    = $("#username").val();
     var password    = $("#password").val();
@@ -11,9 +11,9 @@ $(function()}{
         url:"getregister.php",
         data:dataString,
         success:function(data){
-          $("#state").html
+          $("#state").html(data);
         }
       });
-      //return false;
+      return false;
   });
 });

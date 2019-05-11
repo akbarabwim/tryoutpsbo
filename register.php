@@ -1,8 +1,3 @@
-<?php include 'inc/footer.php'; ?>
-
-//terus commit ke 2 buat ganti bahasa & nambahin pembenarannya
-
-
 <?php include 'inc/header.php'; ?>
 <div class="main">
 <h1>Ujian Online- User Registration</h1>
