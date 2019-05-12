@@ -7,7 +7,7 @@
 }
 .success{
   color:green;}
-.error {
+.error,.empty,.disable {
   color: red;
 }
 .footeroption{background:#444;color:#fff;text-align:center;padding:20px;}
@@ -68,14 +68,14 @@ input[type="submit"] {
   border: 1px solid #d3d3d3;
   border-radius: 4px;
   float: left;
-  min-height: 225px;
+  min-height: 245px;
   padding: 20px;
   width: 357px;
 }
 .segment img {
   height: 200px;
   margin-left: 80px;
-  padding-top: 12px;
+  padding-top: 20px;
 }
 .segment h2 {
   border-bottom: 1px solid #ddd;
