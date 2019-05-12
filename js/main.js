@@ -31,18 +31,21 @@ $(function(){
         success:function(data){
           if($.trim(data)=="empty"){
                   $(".empty").show();
-                  $(".disable").hide();
-                  $(".error").hide();
+                  setTimeout(function(){
+                    $(".empty").fadeOut();
+                  },3000);
           }
           else if($.trim(data)=="disable"){
-                  $(".disable").show();          
-                  $(".error").hide();
-                  $(".empty").hide();
+                  $(".disable").show();
+                  setTimeout(function(){
+                    $(".empty").fadeOut();
+                  },3000);
           }
           else if($.trim(data)=="error"){
                   $(".error").show();
-                  $(".disable").hide();
-                  $(".empty").hide();
+                  setTimeout(function(){
+                    $(".empty").fadeOut();
+                  },3000);
           }
         }
           else{
