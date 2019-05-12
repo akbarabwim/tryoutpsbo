@@ -80,6 +80,11 @@ class User{
 
   }
 
+  public function getUserData($userid){
+    $query = "SELECT * FROM tbl_user WHERE userid='$userid'";
+    $result = $this->db->select($query);
+    return $result;
+  }
   public function getAllUser(){
     $query = "SELECT * FROM tbl_user";
     $result = $this->db->select($query);
