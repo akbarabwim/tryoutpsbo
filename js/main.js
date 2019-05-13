@@ -1,5 +1,5 @@
 $(function(){
-  //untuk registrasi
+  //untuk registrasi peserta
   $("#regsubmit").click(function(){
     var name        = $("#name").val();
     var username    = $("#username").val();
@@ -13,44 +13,6 @@ $(function(){
         success:function(data){
           $("#state").html(data);
         }
-      });
-      return false;
-  });
-});
-
-$(function(){
-  //untuk login..
-  $("#loginsubmit").click(function(){
-    var email       = $("#email").val();
-    var password    = $("#password").val();
-    var dataString  = '&email='+email+'&password='+password;
-      $.ajax({
-        type:"POST",
-        url:"getlogin.php",
-        data:dataString,
-        success:function(data){
-          if($.trim(data)=="empty"){
-                  $(".empty").show();
-                  setTimeout(function(){
-                    $(".empty").fadeOut();
-                  },3000);
-          }
-          else if($.trim(data)=="disable"){
-                  $(".disable").show();
-                  setTimeout(function(){
-                    $(".empty").fadeOut();
-                  },3000);
-          }
-          else if($.trim(data)=="error"){
-                  $(".error").show();
-                  setTimeout(function(){
-                    $(".empty").fadeOut();
-                  },3000);
-          }
-        }
-          else{
-            window.location="exam.php";
-          }
       });
       return false;
   });
