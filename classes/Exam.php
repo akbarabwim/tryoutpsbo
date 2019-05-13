@@ -78,5 +78,18 @@ class Exam{
       $result = $getdata->fetch_assoc();
       return $result;
   }
+
+  public function getQuesByNumber($number){
+    $query = "SELECT * FROM tbl_ques WHERE quesNo = '$number'";
+    $getdata = $this->db->select($query);
+    $result = $getdata->fetch_assoc();
+    return $result;
+  }
+
+  public function getAnswer($number){
+    $query = "SELECT * FROM tbl_ans WHERE quesNo = '$number'";
+    $getdata = $this->db->select($query);
+    return $getdata;
+  }
   }
  ?>
