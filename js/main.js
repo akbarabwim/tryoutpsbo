@@ -16,4 +16,19 @@ $(function(){
       });
       return false;
   });
+  //untuk login peserta
+  $("#loginsubmit").click(function(){
+    var email       = $("#email").val();
+    var password    = $("#password").val();
+    var dataString  = 'email='+email+'&password='+password;
+      $.ajax({
+        type:"POST",
+        url:"getlogin.php",
+        data:dataString,
+        success:function(data){
+          $("#state").html(data);
+        }
+      });
+      return false;
+  });
 });
