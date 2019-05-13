@@ -71,5 +71,12 @@ class Exam{
     $total = $getResult->num_rows;
     return $total;
   }
+
+  public function getQuestion(){
+      $query = "SELECT * FROM tbl_ques";
+      $getdata = $this->db->select($query);
+      $result = $getdata->fetch_assoc();
+      return $result;
+  }
   }
  ?>
