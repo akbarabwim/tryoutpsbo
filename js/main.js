@@ -16,17 +16,23 @@ $(function(){
       });
       return false;
   });
-  //untuk login peserta
+
   $("#loginsubmit").click(function(){
-    var email       = $("#email").val();
+    var username    = $("#username").val();
     var password    = $("#password").val();
-    var dataString  = 'email='+email+'&password='+password;
+    var dataString  = 'username='+username+'&password='+password;
       $.ajax({
         type:"POST",
         url:"getlogin.php",
         data:dataString,
-        success:function(data){
-          $("#state").html(data);
+        success: function(data){
+          if ($.trim(data) == "empty") {
+            $(".empty").show();
+          }else if ($.trim(data)=="error") {
+            $(".error").show();
+          }else{
+            window.location = "exam.php";
+          }
         }
       });
       return false;

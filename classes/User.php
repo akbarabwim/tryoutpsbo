@@ -1,5 +1,6 @@
 <?php
 $filepath = realpath(dirname(__FILE__));
+include_once ($filepath.'/../lib/Session.php');
 include_once ($filepath.'/../lib/Database.php');
 include_once ($filepath.'/../helpers/Format.php');
 
@@ -46,33 +47,40 @@ class User{
       }
     }
   }
-  
-  public function userLogin($email,$password){
-    $email = $this->fm->validation($email);
+  public function userLogin($username, $password){
+    $username = $this->fm->validation($username);
     $password = $this->fm->validation($password);
-    $email = mysqli_real_escape_string($this->db->link, $email);
+
+    $username = mysqli_real_escape_string($this->db->link, $username);
     $password = mysqli_real_escape_string($this->db->link, $password);
-    
-    if ($email == ""|| $password == ""){
-      echo "<span class='error'> Form Tidak Boleh Kosong</span>";
+
+    if ($username == "" || $password == "") {
+      echo "empty";
       exit();
-    }else{
-      $query = "SELECT * FROM tbl_user WHERE email='$email' AND password='$password'";
+    }
+    else{
+      $query = "SELECT * FROM tbl_user WHERE username='$username' AND password='$password'";
       $result = $this->db->select($query);
-      if ($result != false){
+      if ($result != false) {
         $value = $result->fetch_assoc();
-        if ($value['']){
-          
-        }
+        Session::init();
+        Session::set("login", true);
+        Session::set("userid", $value['userid']);
+        Session::set("email", $value['email']);
+        Session::set("name", $value['name']);
+      }
+      else{
+        echo "error";
+        exit();
       }
     }
   }
-  
   public function getAllUser(){
     $query = "SELECT * FROM tbl_user";
     $result = $this->db->select($query);
     return $result;
   }
+
 
   public function deleteUser($userid){
     $query = "DELETE FROM tbl_user WHERE userid = '$userid'";

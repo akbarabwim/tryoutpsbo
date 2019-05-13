@@ -7,7 +7,7 @@
 }
 .success{
   color:green;}
-.error {
+.error, .empty {
   color: red;
 }
 .footeroption{background:#444;color:#fff;text-align:center;padding:20px;}
