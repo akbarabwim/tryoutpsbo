@@ -46,6 +46,28 @@ class User{
       }
     }
   }
+  
+  public function userLogin($email,$password){
+    $email = $this->fm->validation($email);
+    $password = $this->fm->validation($password);
+    $email = mysqli_real_escape_string($this->db->link, $email);
+    $password = mysqli_real_escape_string($this->db->link, $password);
+    
+    if ($email == ""|| $password == ""){
+      echo "<span class='error'> Form Tidak Boleh Kosong</span>";
+      exit();
+    }else{
+      $query = "SELECT * FROM tbl_user WHERE email='$email' AND password='$password'";
+      $result = $this->db->select($query);
+      if ($result != false){
+        $value = $result->fetch_assoc();
+        if ($value['']){
+          
+        }
+      }
+    }
+  }
+  
   public function getAllUser(){
     $query = "SELECT * FROM tbl_user";
     $result = $this->db->select($query);
