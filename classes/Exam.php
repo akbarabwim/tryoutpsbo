@@ -11,7 +11,7 @@ class Exam{
       $this->fm = new Format();
   }
   public function getQuesMath(){
-    $query = "SELECT * FROM tbl_ques WHERE mapel = '3'ORDER BY quesNo ASC";
+    $query = "SELECT * FROM tbl_ques ORDER BY quesNo ASC";
     $result = $this->db->select($query);
     return $result;
   }

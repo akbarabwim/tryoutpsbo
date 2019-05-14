@@ -123,6 +123,25 @@ input[type="submit"] {
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
+.viewans{
+  border: 1px solid #f3f3f3;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.viewans input[type="radio"]{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.viewans h3{
+  border-bottom: : 1px solid #f3f3f3;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
 .starttest{
   border : 1px solid #f4f4f4;
   margin : 0 auto;
@@ -144,7 +163,7 @@ input[type="submit"] {
 .starttest ul li{
   margin-top: 5px;
 }
-.starttest a{
+.starttest a, .viewans a{
   background: #f4f4f4 none repeat scroll 0 0;
   border: 1px solid #ddd;
   color : #444;
