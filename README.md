@@ -21,7 +21,7 @@ Berdasarkan penjabaran diatas maka penulis memiliki sebuah ide untuk membuat apl
 Mengembangkan platform berbasis website dengan menggunakan OOP dan juga menggunakan PHP AJAX dan JQuery sebagai framework
 
 ## Sekilas User Story
-Ani merupakan seorang siswi kelas 9 menengah pertama yang ingin Ia ingin mengikuti tryout online untuk menguji kemampuannya dalam mata pelajaran UN seperti matematika, IPA, IPS dan Bahasa Inggris. Sehingga ia lebih siap dalam menghadapi UN. 
+Ani merupakan seorang siswi kelas 9 menengah pertama yang ingin Ia ingin mengikuti tryout online untuk menguji kemampuannya dalam mata pelajaran UN seperti matematika, IPA, Bahasa Indonesia dan Bahasa Inggris. Sehingga ia lebih siap dalam menghadapi UN. 
 
 ## Deskripsi Singkat
 (Aplikasi ini) adalah sebuah aplikasi try-out online yang ditujukan kepada siswa SMP. Pada aplikasi ini, user dapat mengisi latihan soal dari berbagai mata pelajaran. Selain itu, siswa juga dapat melakukan try-out online serta dapat melihat nilai dari try-out tersebut.
