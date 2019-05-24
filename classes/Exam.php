@@ -91,22 +91,108 @@ class Exam{
     return $total;
   }
 
-  public function getQuestion(){
-      $query = "SELECT * FROM tbl_ques";
+  public function getTotalRowsIndo(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel='1'";
+    $getResult = $this->db->select($query);
+    $total = $getResult->num_rows;
+    return $total;
+  }
+
+  public function getTotalRowsEnglish(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel='2'";
+    $getResult = $this->db->select($query);
+    $total = $getResult->num_rows;
+    return $total;
+  }
+
+  public function getTotalRowsMath(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel='3'";
+    $getResult = $this->db->select($query);
+    $total = $getResult->num_rows;
+    return $total;
+  }
+
+  public function getTotalRowsIPA(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel='4'";
+    $getResult = $this->db->select($query);
+    $total = $getResult->num_rows;
+    return $total;
+  }
+  public function getQuestionIndo(){
+      $query = "SELECT * FROM tbl_ques WHERE mapel = '1'";
+      $getdata = $this->db->select($query);
+      $result = $getdata->fetch_assoc();
+      return $result;
+  }
+  public function getQuestionEnglish(){
+      $query = "SELECT * FROM tbl_ques WHERE mapel = '2'";
       $getdata = $this->db->select($query);
       $result = $getdata->fetch_assoc();
       return $result;
   }
 
-  public function getQuesByNumber($number){
-    $query = "SELECT * FROM tbl_ques WHERE quesNo = '$number'";
+  public function getQuestionMath(){
+      $query = "SELECT * FROM tbl_ques WHERE mapel = '3'";
+      $getdata = $this->db->select($query);
+      $result = $getdata->fetch_assoc();
+      return $result;
+  }
+
+  public function getQuestionIPA(){
+      $query = "SELECT * FROM tbl_ques WHERE mapel = '4'";
+      $getdata = $this->db->select($query);
+      $result = $getdata->fetch_assoc();
+      return $result;
+  }
+
+  public function getQuesByNumberIndo($number){
+    $query = "SELECT * FROM tbl_ques WHERE (quesNo = '$number' AND mapel='1')";
     $getdata = $this->db->select($query);
     $result = $getdata->fetch_assoc();
     return $result;
   }
 
-  public function getAnswer($number){
-    $query = "SELECT * FROM tbl_ans WHERE quesNo = '$number'";
+  public function getQuesByNumberEnglish($number){
+    $query = "SELECT * FROM tbl_ques WHERE (quesNo = '$number' AND mapel='2')";
+    $getdata = $this->db->select($query);
+    $result = $getdata->fetch_assoc();
+    return $result;
+  }
+
+  public function getQuesByNumberMath($number){
+    $query = "SELECT * FROM tbl_ques WHERE (quesNo = '$number' AND mapel='3')";
+    $getdata = $this->db->select($query);
+    $result = $getdata->fetch_assoc();
+    return $result;
+  }
+
+  public function getQuesByNumberIPA($number){
+    $query = "SELECT * FROM tbl_ques WHERE (quesNo = '$number' AND mapel='4')";
+    $getdata = $this->db->select($query);
+    $result = $getdata->fetch_assoc();
+    return $result;
+  }
+
+  public function getAnswerIndo($number){
+    $query = "SELECT * FROM tbl_ans WHERE (quesNo = '$number' AND mapel='1')";
+    $getdata = $this->db->select($query);
+    return $getdata;
+  }
+
+  public function getAnswerEnglish($number){
+    $query = "SELECT * FROM tbl_ans WHERE (quesNo = '$number' AND mapel ='2')";
+    $getdata = $this->db->select($query);
+    return $getdata;
+  }
+
+  public function getAnswerMath($number){
+    $query = "SELECT * FROM tbl_ans WHERE (quesNo = '$number' AND mapel='3')";
+    $getdata = $this->db->select($query);
+    return $getdata;
+  }
+
+  public function getAnswerIPA($number){
+    $query = "SELECT * FROM tbl_ans WHERE (quesNo = '$number' AND mapel='4')";
     $getdata = $this->db->select($query);
     return $getdata;
   }

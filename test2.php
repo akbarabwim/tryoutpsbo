@@ -6,12 +6,12 @@
 	}else {
 		header("Location:exam.php");
 	}
-	$total = $exm->getTotalRowsMath();
-	$question= $exm->getQuesByNumberMath($number);
+	$total = $exm->getTotalRowsEnglish();
+	$question= $exm->getQuesByNumberEnglish($number);
  ?>
  <?php
 	if ($_SERVER['REQUEST_METHOD']=='POST') {
-		$process = $pro->processData($_POST);
+		$process = $pro->processDataEnglish($_POST);
 	}
   ?>
 <div class="main">
@@ -25,7 +25,7 @@
 				</td>
 			</tr>
 			<?php
-				$answer = $exm->getAnswer($number);
+				$answer = $exm->getAnswerEnglish($number);
 				if($answer){
 					while ($result = $answer->fetch_assoc()) {
 			 ?>

@@ -41,11 +41,7 @@ $next = $total+1;
           <tr>
             <td>No. Pertanyaan</td>
             <td>:</td>
-            <td><input type="number" value="<?php
-              if (isset($next)){
-                echo $next;
-              }
-            ?>" name="quesNo"/></td>
+            <td><input type="number" name="quesNo"/></td>
           </tr>
           <tr>
             <td>Pertanyaan</td>

@@ -1,7 +1,7 @@
 <?php include 'inc/header.php'; ?>
 <?php Session::checkSession();
-      $question = $exm->getQuestion();
-      $total = $exm->getTotalRows();
+      $question = $exm->getQuestionIndo();
+      $total = $exm->getTotalRowsIndo();
  ?>
 <div class="main">
 <h1>Selamat Datang di Try Out Online</h1>
@@ -12,7 +12,7 @@
     <li><strong>Jumlah Soal :</strong> <?php echo $total;?></li>
     <li><strong>Bentuk Soal :</strong> Pilihan Ganda</li>
   </ul>
-  <a href="test.php?q=<?php echo $question['quesNo']?>">Mulai Try Out</a>
+  <a href="test1.php?q=<?php echo $question['quesNo']?>">Mulai Try Out</a>
 	</div>
 
   </div>

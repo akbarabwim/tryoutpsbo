@@ -11,7 +11,7 @@
  ?>
  <?php
 	if ($_SERVER['REQUEST_METHOD']=='POST') {
-		$process = $pro->processData($_POST);
+		$process = $pro->processDataMath($_POST);
 	}
   ?>
 <div class="main">
@@ -25,7 +25,7 @@
 				</td>
 			</tr>
 			<?php
-				$answer = $exm->getAnswer($number);
+				$answer = $exm->getAnswerMath($number);
 				if($answer){
 					while ($result = $answer->fetch_assoc()) {
 			 ?>

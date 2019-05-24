@@ -14,8 +14,8 @@
          ?>
     </p>
 
-    <a href="viewans.php">Lihat Jawaban</a>
-    <a href="starttest.php">Mulai Lagi</a>
+    <a href="viewans3.php">Lihat Jawaban</a>
+    <a href="starttest3.php">Mulai Lagi</a>
   </div>
   </div>
 <?php include 'inc/footer.php'; ?>

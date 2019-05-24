@@ -1,14 +1,14 @@
 <?php include 'inc/header.php'; ?>
 <?php
 	Session::checkSession();
-  $total = $exm->getTotalRows();
+  $total = $exm->getTotalRowsIndo();
   ?>
 <div class="main">
 <h1>Semua Pertanyaan dan Jawaban : <?php echo $total; ?></h1>
 	<div class="viewans">
 		<table>
       <?php
-      $getQues = $exm->getQuesMath();
+      $getQues = $exm->getQuesIndo();
       if ($getQues) {
         while ($question = $getQues->fetch_assoc()) {
        ?>
@@ -19,7 +19,7 @@
 			</tr>
 			<?php
         $number = $question['quesNo'];
-				$answer = $exm->getAnswer($number);
+				$answer = $exm->getAnswerIndo($number);
 				if($answer){
 					while ($result = $answer->fetch_assoc()) {
 			 ?>
@@ -39,7 +39,7 @@
       } ?>
 
 		</table>
-    <a href="starttest.php">Mulai Lagi</a>
+    <a href="starttest1.php">Mulai Lagi</a>
 </div>
  </div>
 <?php include 'inc/footer.php'; ?>
