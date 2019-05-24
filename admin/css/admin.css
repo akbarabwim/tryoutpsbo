@@ -82,7 +82,7 @@ table.tblone th {
 .segment {
   border: 1px solid #d3d3d3;
   border-radius: 4px;
-  float: left;
+  margin : auto;
   min-height: 225px;
   padding: 20px;
   width: 357px;

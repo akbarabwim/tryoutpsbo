@@ -10,8 +10,26 @@ class Exam{
       $this->db = new Database();
       $this->fm = new Format();
   }
+  public function getQuesIndo(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel = '1' ORDER BY quesNo ASC";
+    $result = $this->db->select($query);
+    return $result;
+  }
+
+  public function getQuesEnglish(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel = '2' ORDER BY quesNo ASC";
+    $result = $this->db->select($query);
+    return $result;
+  }
+
   public function getQuesMath(){
-    $query = "SELECT * FROM tbl_ques ORDER BY quesNo ASC";
+    $query = "SELECT * FROM tbl_ques WHERE mapel = '3' ORDER BY quesNo ASC";
+    $result = $this->db->select($query);
+    return $result;
+  }
+
+  public function getQuesIPA(){
+    $query = "SELECT * FROM tbl_ques WHERE mapel = '4' ORDER BY quesNo ASC";
     $result = $this->db->select($query);
     return $result;
   }
@@ -19,22 +37,23 @@ class Exam{
   public function addQuestions($data){
     $quesNo = mysqli_real_escape_string($this->db->link, $data['quesNo']);
     $ques = mysqli_real_escape_string($this->db->link, $data['ques']);
+    $mapel = mysqli_real_escape_string($this->db->link, $data['mapel']);
     $ans = array();
     $ans[1] = $data['ans1'];
     $ans[2] = $data['ans2'];
     $ans[3] = $data['ans3'];
     $ans[4] = $data['ans4'];
     $rightAns = $data['rightAns'];
-    $query = "INSERT INTO tbl_ques(quesNo,ques) VALUES ('$quesNo','$ques')";
+    $query = "INSERT INTO tbl_ques(quesNo,ques,mapel) VALUES ('$quesNo','$ques', '$mapel')";
     $insert_row = $this->db->insert($query);
     if ($insert_row){
       foreach ($ans as $key => $ansName) {
         if ($ansName != '') {
           if ($rightAns == $key) {
-            $rquery = "INSERT INTO tbl_ans(quesNo, rightAns, ans) VALUES('$quesNo', '1', '$ansName')";
+            $rquery = "INSERT INTO tbl_ans(quesNo, rightAns, ans, mapel) VALUES('$quesNo', '1', '$ansName', '$mapel')";
           }
           else {
-            $rquery = "INSERT INTO tbl_ans(quesNo, rightAns, ans) VALUES('$quesNo', '0', '$ansName')";
+            $rquery = "INSERT INTO tbl_ans(quesNo, rightAns, ans, mapel) VALUES('$quesNo', '0', '$ansName', '$mapel')";
           }
           $insertrow = $this->db->insert($rquery);
           if ($insertrow) {

@@ -23,7 +23,7 @@
               <th width = "20%">Action</th>
             </tr>
 <?php
-      $getData = $exm->getQuesEnglish();
+      $getData = $exm->getQuesIndo();
       if($getData){
         $i=0;
         while ($result = $getData->fetch_assoc()) {

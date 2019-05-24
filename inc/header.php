@@ -24,7 +24,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 <!doctype html>
 <html>
 <head>
-	<title>Online Exam System</title>
+	<title>Try Out SMP Online</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="no-cache">
@@ -57,6 +57,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 		<?php }else{ ?>
 			<li><a href="index.php">Login</a></li>
 			<li><a href="register.php">Register</a></li>
+			<li><a href="admin/index.php">Admin Page</a></li>
 		<?php } ?>
 		</ul>
 		<?php

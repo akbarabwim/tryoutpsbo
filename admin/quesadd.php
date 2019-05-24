@@ -29,6 +29,16 @@ $next = $total+1;
       <form action="" method="post">
         <table>
           <tr>
+            <td>Mata Pelajaran</td>
+            <td>:</td>
+            <td><select name="mapel">
+              <option value="1">Bahasa Indonesia</option>
+              <option value="2">Bahasa Inggris</option>
+              <option value="3">Matematika</option>
+              <option value="4" selected>IPA</option>
+            </select></td>
+          </tr>
+          <tr>
             <td>No. Pertanyaan</td>
             <td>:</td>
             <td><input type="number" value="<?php
