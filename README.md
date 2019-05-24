@@ -37,7 +37,7 @@ Tahap analisis: pada tahap ini berlangsung proses pengumpulan kebutuhan secara l
         Kebutuhan admin:  input soal
                           +hapus user yang bermasalah
                           
-##TOR
+## TOR
 https://docs.google.com/document/d/1cvGtd_B8Nje-xXjOuH1tIuEHkPXUSNmPc3mWwqUmz48/edit?usp=sharing
 
 Tahap desain:
