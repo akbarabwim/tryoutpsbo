@@ -1,14 +1,11 @@
 <?php include 'inc/header.php'; ?>
 <div class="main">
 <h1>Try Out SMP Online- User Registration</h1>
-	<div class="segment" style="margin-right:30px;">
-		<img src="img/regi.png"/>
-	</div>
 	<div class="segment">
 	<form action="" method="post">
 		<table>
 		<tr>
-           <td>Name</td>
+           <td>Nama</td>
            <td><input type="text" name="name" id="name"></td>
          </tr>
 		<tr>
@@ -31,7 +28,7 @@
          </tr>
        </table>
 	   </form>
-	   <p>Already Registered ? <a href="index.php">Login</a> Here</p>
+	   <p>Sudah Terdaftar?<a href="index.php">Login Disini</a></p>
 		 <span id="state"></span>
 	</div>
 
