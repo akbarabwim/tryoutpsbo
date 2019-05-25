@@ -7,7 +7,7 @@
 <?php
   if (isset($_GET['delque'])) {
       $delNo = (int)$_GET['delque'];
-      $delQue = $exm->deleteQuestion($delNo);
+      $delQue = $exm->deleteQuestionEnglish($delNo);
     }
  ?>
 <div class="main">

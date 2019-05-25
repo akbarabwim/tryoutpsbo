@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
 <div class="main">
-<h1>Ujian Online- User Registration</h1>
+<h1>Try Out SMP Online- User Registration</h1>
 	<div class="segment" style="margin-right:30px;">
 		<img src="img/regi.png"/>
 	</div>

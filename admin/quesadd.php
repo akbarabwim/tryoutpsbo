@@ -35,7 +35,7 @@ $next = $total+1;
               <option value="1">Bahasa Indonesia</option>
               <option value="2">Bahasa Inggris</option>
               <option value="3">Matematika</option>
-              <option value="4" selected>IPA</option>
+              <option value="4">IPA</option>
             </select></td>
           </tr>
           <tr>

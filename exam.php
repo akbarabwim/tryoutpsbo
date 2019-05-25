@@ -2,10 +2,7 @@
 <?php Session::checkSession();
  ?>
 <div class="main">
-<h1>Welcome to Online Exam - Start Now</h1>
-	<div class="segment" style="margin-right:30px;">
-		<img src="img/online_exam.png"/>
-	</div>
+<h1>Try Out SMP Online - Beranda</h1>
 	<div class="segment">
 	<h2>Silahkan Pilih Mata Pelajaran</h2>
 	<ul>

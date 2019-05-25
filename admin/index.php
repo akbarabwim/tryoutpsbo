@@ -13,7 +13,7 @@
 <h1>Admin Panel</h1>
     <div class="adminpanel">
           <h2>Selamat datang, Admin</h2>
-          <p>Anda damat mengatur user dan sistem disini.</p>
+          <p>Anda dapat mengatur User dan Try Out disini.</p>
     </div>
 
 

@@ -1,7 +1,7 @@
  *{margin:0;padding:0;outline:none}
  body{font-family:verdana}.phpcoding{width:900px; margin: 0 auto;background:#ddd}
  .headeroption {
-  background: #444 url("../img/loginbanner.png") no-repeat scroll 0 0;
+  background: #444 url("../img/banner2.png") no-repeat scroll 0 0;
   border-bottom: 2px solid #444444;
   height: 100px;
 }
@@ -12,6 +12,20 @@
   min-height: 430px;
   padding: 20px;
 }
+.menu{overflow:hidden;}
+.menu ul{margin:0;padding:0;list-style:none}
+.menu ul li{display:block;float:left;}
+.menu ul li a {
+  border: 1px solid #9f9f9f;
+  border-radius: 3px;
+  color: #444;
+  display: block;
+  font-size: 14px;
+  margin: 0 5px 5px;
+  padding: 1px 5px 3px;
+  text-decoration: none;
+}
+.menu ul li a:hover{border:1px solid #fff;;color: #fff;}
 .success{
   color:green;
   display: block;

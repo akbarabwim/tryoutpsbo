@@ -68,10 +68,58 @@ class Exam{
     }
   }
 
-  public function deleteQuestion($quesNo){
+  public function deleteQuestionIndo($quesNo){
     $tables = array("tbl_ques","tbl_ans");
     foreach ($tables as $table) {
-      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo'";
+      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo' AND mapel='1'";
+      $deldata = $this->db->delete($delquery);
+    }
+    if ($deldata) {
+      $msg = "<span class = 'success'>Soal berhasil dihapus</span>";
+      return $msg;
+    }
+    else {
+      $msg = "<span class = 'success'>Terjadi Kesalahan</span>";
+      return $msg;
+    }
+  }
+
+  public function deleteQuestionEnglish($quesNo){
+    $tables = array("tbl_ques","tbl_ans");
+    foreach ($tables as $table) {
+      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo' AND mapel='2'";
+      $deldata = $this->db->delete($delquery);
+    }
+    if ($deldata) {
+      $msg = "<span class = 'success'>Soal berhasil dihapus</span>";
+      return $msg;
+    }
+    else {
+      $msg = "<span class = 'success'>Terjadi Kesalahan</span>";
+      return $msg;
+    }
+  }
+
+  public function deleteQuestionMath($quesNo){
+    $tables = array("tbl_ques","tbl_ans");
+    foreach ($tables as $table) {
+      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo' AND mapel='3'";
+      $deldata = $this->db->delete($delquery);
+    }
+    if ($deldata) {
+      $msg = "<span class = 'success'>Soal berhasil dihapus</span>";
+      return $msg;
+    }
+    else {
+      $msg = "<span class = 'success'>Terjadi Kesalahan</span>";
+      return $msg;
+    }
+  }
+
+  public function deleteQuestionIPA($quesNo){
+    $tables = array("tbl_ques","tbl_ans");
+    foreach ($tables as $table) {
+      $delquery = "DELETE FROM $table WHERE quesNo='$quesNo' AND mapel='4'";
       $deldata = $this->db->delete($delquery);
     }
     if ($deldata) {
